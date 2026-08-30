@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --navy: #0b1a43;
+  --navy-deep: #06102c;
+  --silver: #c0c0c0;
+  --gold: #d4af37;
+  --gold-bright: #e8c547;
+  --gold-flare: #daff57;
+  --cream: #fffff0;
+  --cream-muted: #f9f9f4;
+  --ink: #0b1a43;
+  --ink-muted: #333333;
+  --ink-faint: #484488;
+  --canvas: #fffff0;
+  --line: #d6d6ce;
+}
+
+html,
+body {
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-image:
+    radial-gradient(circle, rgba(11, 26, 67, 0.045) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+html[lang="ar"] body {
+  line-height: 1.75;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html.font-arabic .font-display {
+  font-family: var(--font-display-ar), var(--font-display), Georgia, serif;
+  line-height: 1.3;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display), var(--font-display-ar), Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(212, 175, 55, 0.28);
+  color: #0b1a43;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+.page-grid {
+  background-image:
+    radial-gradient(circle, rgba(11, 26, 67, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.pattern-circuit {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-opacity='0.16' stroke-width='0.8'%3E%3Cpath d='M8 24h36l12 12h28M56 8v28l16 16v36M120 16h24v32l-16 16h-24M20 120h40l16-16h32M96 80v40l20 20'/%3E%3Ccircle cx='56' cy='36' r='2' fill='%23D4AF37' fill-opacity='0.35' stroke='none'/%3E%3Ccircle cx='96' cy='80' r='2' fill='%23D4AF37' fill-opacity='0.35' stroke='none'/%3E%3Ccircle cx='128' cy='64' r='2' fill='%23D4AF37' fill-opacity='0.35' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.pattern-peaks {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='90' viewBox='0 0 220 90'%3E%3Cpath d='M0 78 L40 28 L80 78 L120 18 L160 78 L200 36 L220 78' fill='none' stroke='%23D4AF37' stroke-opacity='0.18' stroke-width='1'/%3E%3Cpath d='M0 88 L55 42 L110 88 L165 30 L220 88' fill='none' stroke='%23CDCDCD' stroke-opacity='0.12' stroke-width='0.8'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+.pattern-vectors {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-opacity='0.12' stroke-width='0.8'%3E%3Cpath d='M90 10 L160 90 L90 170 L20 90 Z'/%3E%3Cpath d='M90 40 L130 90 L90 140 L50 90 Z'/%3E%3Ccircle cx='90' cy='90' r='18'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.ink-panel {
+  position: relative;
+  background:
+    radial-gradient(900px 520px at 12% 0%, rgba(212, 175, 55, 0.16), transparent 58%),
+    radial-gradient(700px 420px at 92% 88%, rgba(75, 173, 166, 0.1), transparent 52%),
+    linear-gradient(165deg, #152454 0%, #0b1a43 48%, #06102c 100%);
+}
+
+.ink-panel::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-opacity='0.13' stroke-width='0.8'%3E%3Cpath d='M8 24h36l12 12h28M56 8v28l16 16v36M120 16h24v32l-16 16h-24M20 120h40l16-16h32M96 80v40l20 20'/%3E%3Ccircle cx='56' cy='36' r='2' fill='%23D4AF37' fill-opacity='0.28' stroke='none'/%3E%3Ccircle cx='96' cy='80' r='2' fill='%23D4AF37' fill-opacity='0.28' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.9;
+}
+
+.ink-panel::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 140px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='90' viewBox='0 0 240 90'%3E%3Cpath d='M0 80 L48 28 L96 80 L144 16 L192 80 L240 36' fill='none' stroke='%23D4AF37' stroke-opacity='0.22' stroke-width='1.1'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+.gold-rule {
+  height: 2px;
+  background: linear-gradient(90deg, #8c6e1f 0%, #d4af37 40%, #f6e79c 70%, #c19b2e 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #8c6e1f 0%, #d4af37 45%, #f3e5ab 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
